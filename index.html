@@ -168,7 +168,12 @@
 							<tr>
 								<td>9:00am to 10:00am</td>
 								<td>Plenary III</td>
-								<td>Speaker: Ilse Ipsen</td>
+								<td>
+									Ilse Ipsen on 
+									"The sensitivity of the normal equations for least squares problems with randomized preconditioners" <br />
+									<button class="button is-small is-light" onclick="document.getElementById('ipsen-modal').classList.add('is-active')">Abstract</button>
+								
+								</td>
 							</tr>
 							<tr>
 								<td>10:00am to 10:45am</td>
@@ -216,5 +221,19 @@
 			</div>
 		</div>
   	</section>
+
+<div class="modal" id="ipsen-modal">
+  <div class="modal-background" onclick="document.getElementById('ipsen-modal').classList.remove('is-active')"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Ilse Ipsen</p>
+      <button class="delete" aria-label="close" onclick="document.getElementById('ipsen-modal').classList.remove('is-active')"></button>
+    </header>
+    <section class="modal-card-body">
+	<p><b>Title:</b> The sensitivity of the normal equations for least squares problems with randomized preconditioners</p>
+	<p><b>Abstract:</b> We start by presenting examples for the sensitivity of least squares problems, and reviewing the role of perturbation theory. Then we consider least squares problems for real matrices of full column-rank, and analyze the sensitivity of the solution from several types of normal equations, which are preconditioned by a randomized preconditioner computed in lower precision. Our perturbation bounds are realistic and informative, and suggest that the conditioning depends only mildly on the quality of the preconditioner; however, it does depend on the size of the least squares residual -- even if the normal equations do not originate from a least squares problem. We illustrate that a randomized preconditioner can deliver a solution accuracy comparable to that of Matlab's mldivide command, is efficient in practice, and well-suited to GPU implementations.</p>
+    </section>
+  </div>
+</div>
 </body>
 </html>
