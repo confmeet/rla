@@ -60,29 +60,10 @@
 				</div>
 			</div>
 		</div>
-		<br />
-		<div class="container">
-			<div class="columns">
-				<div class="column is-half" id="registration">
-					<h4 class="title is-4">Interest Form</h4>
-					<p>
-						There are a limited number of spots available for the workshop.
-						If you would like to attend,  
-						we ask that you complete
-						<a href="https://docs.google.com/forms/d/e/1FAIpQLSfn2I-iSLySRXVLc9u1167Ep616VoNRjPfUMM-58SrPFBvybQ/viewform?usp=dialog"
-						>this interest form</a> by <strong>February 13, 2026
-						5pm CT</strong>. 
-						We will send you a declination or confirmation email shortly 
-						after the deadline.
-						There is <strong>no</strong> registration fee.
-					</p>
-				</div>
-			</div>
-		</div>
   	</section>
     <section class="section" id="agenda">
 		<div class="container">
-			<h4 class="title is-4">Tentative Agenda</h4>
+			<h4 class="title is-4">Agenda</h4>
 			<div class="columns">
 				<div class="column is-half">
 					<p>
@@ -186,7 +167,12 @@
 							<tr>
 								<td>10:45am to 11:30am</td>
 								<td>Computing Tutorial II</td>
-								<td>Speaker: Nathaniel Pritchard</td>
+								<td>
+									Nathaniel Pritchard  on 
+									"Using randomized linear algebra on example applications in <code>Julia</code>" <br />
+									<button class="button is-small is-light" onclick="document.getElementById('pritchard-modal').classList.add('is-active')">Details</button>
+
+								</td>
 							</tr>
 							<tr>
 								<td>11:30am to 12:30pm</td>
@@ -248,6 +234,33 @@
     <section class="modal-card-body">
 	<p><b>Title:</b> The sensitivity of the normal equations for least squares problems with randomized preconditioners</p>
 	<p><b>Abstract:</b> We start by presenting examples for the sensitivity of least squares problems, and reviewing the role of perturbation theory. Then we consider least squares problems for real matrices of full column-rank, and analyze the sensitivity of the solution from several types of normal equations, which are preconditioned by a randomized preconditioner computed in lower precision. Our perturbation bounds are realistic and informative, and suggest that the conditioning depends only mildly on the quality of the preconditioner; however, it does depend on the size of the least squares residual -- even if the normal equations do not originate from a least squares problem. We illustrate that a randomized preconditioner can deliver a solution accuracy comparable to that of Matlab's mldivide command, is efficient in practice, and well-suited to GPU implementations.</p>
+    </section>
+  </div>
+</div>
+<div class="modal" id="pritchard-modal">
+  <div class="modal-background" onclick="document.getElementById('pritchard-modal').classList.remove('is-active')"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Nathaniel Pritchard</p>
+      <button class="delete" aria-label="close" onclick="document.getElementById('pritchard-modal').classList.remove('is-active')"></button>
+    </header>
+    <section class="modal-card-body">
+	<p><b>Tutorial:</b> Using randomized linear algebra on example applications in <code>Julia</code></p> <br />
+	<p>
+		<b>Step 1:</b> 
+		Please install <a href="https://www.docker.com/" target="_blank">Docker</a> and pull <code>npritch92895/randlinearalgebra_examples</code>. 
+	</p> <br />
+	<p>
+		<b>Step 2 (Option 1):</b>
+		From the desktop application, you can run the container by clicking <code>run</code> from the <code>Images</code> tab. Under the optional settings, please type in 8888 into the host port. 
+	</p> <br />
+	<p>
+		<b>Step 2 (Option 2):</b>
+		If you are using the command line interface, please use <code> docker run --rm -p 8888:8888 randlinearalgebra_examples</code>.
+	</p> <br />
+	<p>	<b>Step 3:</b>
+		You can now access the container by visiting <code>localhost:8888</code> in your browser.
+	</p>
     </section>
   </div>
 </div>
