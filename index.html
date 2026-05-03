@@ -75,14 +75,19 @@
 			<div class="columns">
 				<div class="column is-half" id="may11">
 					<h5 class="subtitle is-5">May 11, 2026</h5>
-					<table class="table">
-						<tdead>
+					<table class="table is-fullwidth">
+						<colgroup>
+							<col style="width: 25%">
+							<col style="width: 25%">
+							<col style="width: 50%">
+						</colgroup>
+						<thead>
 							<tr>
 								<th>Time</th>
 								<th>Event</th>
 								<th>Details</th>
 							</tr>
-						</tdead>
+						</thead>
 						<tbody>
 							<tr>
 								<td>8:15am to 8:45am</td> 
@@ -97,7 +102,13 @@
 							<tr>
 								<td>9:00am to 10:00am</td>
 								<td>RLA Theory Tutorial</td>
-								<td>Speaker: Micha&#322; Derezi&nacute;ski</td>
+								<td>
+									Micha&#322; Derezi&nacute;ski on ``Foundations of randomized numerical linear algebra" <br />
+									<button class="button is-small is-light" onclick="document.getElementById('derezinski-modal').classList.add('is-active')">Details</button>
+
+
+
+								</td>
 							</tr>
 							<tr>
 								<td>10:00am to 10:30am</td>
@@ -140,14 +151,19 @@
 			<div class="columns">
 				<div class="column is-half" id="may12">
 					<h5 class="subtitle is-5">May 12, 2026</h5>
-					<table class="table">
-						<tdead>
+					<table class="table is-fullwidth">
+						<colgroup>
+							<col style="width: 25%">
+							<col style="width: 25%">
+							<col style="width: 50%">
+						</colgroup>
+						<thead>
 							<tr>
 								<th>Time</th>
 								<th>Event</th>
 								<th>Details</th>
 							</tr>
-						</tdead>
+						</thead>
 						<tbody>
 							<tr>
 								<td>9:00am to 10:00am</td>
@@ -234,6 +250,19 @@
     <section class="modal-card-body">
 	<p><b>Title:</b> The sensitivity of the normal equations for least squares problems with randomized preconditioners</p>
 	<p><b>Abstract:</b> We start by presenting examples for the sensitivity of least squares problems, and reviewing the role of perturbation theory. Then we consider least squares problems for real matrices of full column-rank, and analyze the sensitivity of the solution from several types of normal equations, which are preconditioned by a randomized preconditioner computed in lower precision. Our perturbation bounds are realistic and informative, and suggest that the conditioning depends only mildly on the quality of the preconditioner; however, it does depend on the size of the least squares residual -- even if the normal equations do not originate from a least squares problem. We illustrate that a randomized preconditioner can deliver a solution accuracy comparable to that of Matlab's mldivide command, is efficient in practice, and well-suited to GPU implementations.</p>
+    </section>
+  </div>
+</div>
+<div class="modal" id="derezinski-modal">
+  <div class="modal-background" onclick="document.getElementById('derezinski-modal').classList.remove('is-active')"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Micha&#322; Derezi&nacute;ski</p>
+      <button class="delete" aria-label="close" onclick="document.getElementById('derezinski-modal').classList.remove('is-active')"></button>
+    </header>
+    <section class="modal-card-body">
+	<p><b>Tutorial:</b> Foundations of randomized numerical linear algebra</p>
+	<p><b>Details:</b> Randomized Numerical Linear Algebra (RandNLA) describes a suite of algorithms which use randomness to construct small representations (sketches) of large data matrices. These sketches are then used to efficiently solve large-scale matrix problems at the core of many scientific, data science and machine learning tasks. This tutorial will overview the algorithmic and theoretical foundations of RandNLA, including such topics as randomized dimensionality reduction, matrix sketching and sampling, least squares, and low-rank approximation, with a particular focus on recent applications to machine learning and optimization. </p>
     </section>
   </div>
 </div>
