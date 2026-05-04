@@ -118,7 +118,10 @@
 							<tr>
 								<td>10:30am to 11:30am</td>
 								<td>Plenary I</td>
-								<td>Speaker: Michael Mahoney</td>
+								<td>
+									Michael Mahoney on "Possible futures for randomized numerical linear algebra" <br />
+									<button class="button is-small is-light" onclick="document.getElementById('mahoney-modal').classList.add('is-active')">Abstract</button>
+								</td>
 							</tr>
 							<tr>
 								<td>11:30am to 12:30pm</td>
@@ -178,7 +181,10 @@
 							<tr>
 								<td>10:00am to 10:45am</td>
 								<td>Computing Tutorial I</td>
-								<td>Speaker: Riley Murray</td>
+								<td>
+									Riley Murray on "Easy* Python wrappers for RandBLAS and RandLAPACK." <br />
+									<button class="button is-small is-light" onclick="document.getElementById('murray-modal').classList.add('is-active')">Details</button>
+								</td>
 							</tr>
 							<tr>
 								<td>10:45am to 11:30am</td>
@@ -235,8 +241,21 @@
       <button class="delete" aria-label="close" onclick="document.getElementById('drineas-modal').classList.remove('is-active')"></button>
     </header>
     <section class="modal-card-body">
-	<p><b>Title:</b> (Randomized) numerical linear algebra</p>
+	<p><b>Title:</b> (Randomized) numerical linear algebra</p> <br />
 	<p><b>Abstract:</b> Numerical Linear Algebra (NLA) has long been a cornerstone of scientific computing, powering advancements in physics, engineering, and beyond. This talk explores how Randomization in NLA (RandNLA) has emerged as a transformative force in data science, machine learning, and artificial intelligence by leveraging randomness to accelerate computations and reduce dimensionality. We will conclude by discussing a modern application of RandNLA to stochastic rounding and its regularization properties.</p>
+    </section>
+  </div>
+</div>
+<div class="modal" id="mahoney-modal">
+  <div class="modal-background" onclick="document.getElementById('mahoney-modal').classList.remove('is-active')"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Petros Drineas</p>
+      <button class="delete" aria-label="close" onclick="document.getElementById('mahoney-modal').classList.remove('is-active')"></button>
+    </header>
+    <section class="modal-card-body">
+	<p><b>Title:</b> Possible futures for randomized numerical linear algebra</p> <br />
+	<p><b>Abstract:</b> Randomized Numerical Linear Algebra (RandNLA) is at an inflection point, and the community needs to decide how it wants to proceed.  Classical RandNLA was based on subspace embeddings and Johnson-Lindenstrauss methods.  It led to remarkable theoretical improvements; and, when used as preconditioners for traditional NLA algorithms, it led to high-quality numerical implementations that clearly improved upon traditional deterministic NLA methods, for a range of problems.  In many cases, however, these threads proceeded in parallel.  In recent years, however, we have witnessed novel theoretical developments based on novel embeddings with closer connections to non-asymptotic random matrix theory, novel use cases and user requirements coming from machine learning (ML) and artificial intelligence (AI), and novel demands in the every-changing hardware landscape, including low precision and multiple (medium, low, and very-low) precision computation.  Recent developments in RandNLA make it uniquely poised to address these interdisciplinary challenges.  In this talk, I'll review some history, some projects on trying to use RandNLA to build the foundations for linear algebra in the modern AI/ML era, and recent research results that hold the potential to tie these directions together.</p>
     </section>
   </div>
 </div>
@@ -248,7 +267,7 @@
       <button class="delete" aria-label="close" onclick="document.getElementById('ipsen-modal').classList.remove('is-active')"></button>
     </header>
     <section class="modal-card-body">
-	<p><b>Title:</b> The sensitivity of the normal equations for least squares problems with randomized preconditioners</p>
+	<p><b>Title:</b> The sensitivity of the normal equations for least squares problems with randomized preconditioners</p> <br />
 	<p><b>Abstract:</b> We start by presenting examples for the sensitivity of least squares problems, and reviewing the role of perturbation theory. Then we consider least squares problems for real matrices of full column-rank, and analyze the sensitivity of the solution from several types of normal equations, which are preconditioned by a randomized preconditioner computed in lower precision. Our perturbation bounds are realistic and informative, and suggest that the conditioning depends only mildly on the quality of the preconditioner; however, it does depend on the size of the least squares residual -- even if the normal equations do not originate from a least squares problem. We illustrate that a randomized preconditioner can deliver a solution accuracy comparable to that of Matlab's mldivide command, is efficient in practice, and well-suited to GPU implementations.</p>
     </section>
   </div>
@@ -261,7 +280,7 @@
       <button class="delete" aria-label="close" onclick="document.getElementById('derezinski-modal').classList.remove('is-active')"></button>
     </header>
     <section class="modal-card-body">
-	<p><b>Tutorial:</b> Foundations of randomized numerical linear algebra</p>
+	<p><b>Tutorial:</b> Foundations of randomized numerical linear algebra</p> <br />
 	<p><b>Details:</b> Randomized Numerical Linear Algebra (RandNLA) describes a suite of algorithms which use randomness to construct small representations (sketches) of large data matrices. These sketches are then used to efficiently solve large-scale matrix problems at the core of many scientific, data science and machine learning tasks. This tutorial will overview the algorithmic and theoretical foundations of RandNLA, including such topics as randomized dimensionality reduction, matrix sketching and sampling, least squares, and low-rank approximation, with a particular focus on recent applications to machine learning and optimization. </p>
     </section>
   </div>
@@ -289,6 +308,25 @@
 	</p> <br />
 	<p>	<b>Step 3:</b>
 		You can now access the container by visiting <code>localhost:8888</code> in your browser.
+	</p>
+    </section>
+  </div>
+</div>
+<div class="modal" id="murray-modal">
+  <div class="modal-background" onclick="document.getElementById('murray-modal').classList.remove('is-active')"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Riley Murray</p>
+      <button class="delete" aria-label="close" onclick="document.getElementById('murray-modal').classList.remove('is-active')"></button>
+    </header>
+    <section class="modal-card-body">
+	<p><b>Tutorial:</b> Easy* Python wrappers for RandBLAS and RandLAPACK</p> <br />
+	<p>
+		<b>Step 1:</b> 
+		Please install <a href="https://www.docker.com/" target="_blank">Docker</a> and <a href="https://docs.conda.io/en/latest/" target="_blank">conda</a>. 
+	</p> <br />
+	<p>
+		Additional instructions will be made available soon.
 	</p>
     </section>
   </div>
