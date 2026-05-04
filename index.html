@@ -142,10 +142,24 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td>2:00pm to 4:00pm</td>
-								<td>Breakout Sessions</td>
-								<td></td>
+								<td>2:00pm to 3:00pm</td>
+								<td>Breakout Sessions I</td>
+								<td>
+									<button class="button is-small is-light mr-1 mb-1" onclick="document.getElementById('breakout1-modal').classList.add('is-active')">Breakout 1: Software Ecosystem</button>
+									<button class="button is-small is-light mr-1 mb-1" onclick="document.getElementById('breakout2-modal').classList.add('is-active')">Breakout 2: Hardware-Aware RandNLA</button>
+									<button class="button is-small is-light mr-1 mb-1" onclick="document.getElementById('breakout3-modal').classList.add('is-active')">Breakout 3: AI and Data-Intensive Science</button>
+									</td>
 							</tr>
+							<tr>
+								<td>3:00pm to 4:00pm</td>
+								<td>Breakout Sessions II</td>
+								<td>
+									<button class="button is-small is-light mr-1 mb-1" onclick="document.getElementById('breakout4-modal').classList.add('is-active')">Breakout 4: Reliability and Error Bounds</button>
+									<button class="button is-small is-light mr-1 mb-1" onclick="document.getElementById('breakout5-modal').classList.add('is-active')">Breakout 5: Workforce Development</button>
+									<button class="button is-small is-light mr-1 mb-1" onclick="document.getElementById('breakout6-modal').classList.add('is-active')">Breakout 6: Scientific Applications</button>
+								</td>
+							</tr>
+							
 						</tbody>
 					</table>
 				</div>
@@ -328,6 +342,165 @@
 	<p>
 		Additional instructions will be made available soon.
 	</p>
+    </section>
+  </div>
+</div>
+
+<div class="modal" id="breakout1-modal">
+  <div class="modal-background" onclick="document.getElementById('breakout1-modal').classList.remove('is-active')"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">RandNLA Software Ecosystem</p>
+      <button class="delete" aria-label="close" onclick="document.getElementById('breakout1-modal').classList.remove('is-active')"></button>
+    </header>
+    <section class="modal-card-body">
+      <p>Multiple community members have independently identified this gap: turning algorithms into reusable, production-quality software that non-experts can use remains an unsolved problem. This session addresses the design principles for a community software ecosystem — architecture decisions (low-level kernels vs. high-level problem-solving environments), automatic parameter tuning to remove the need for expert configuration, interoperability with existing numerical libraries, and long-term governance and maintenance models. This maps directly to OAC's Cyberinfrastructure for Sustained Scientific Innovation (CSSI) program and its investments in sustainable scientific software.</p>
+      <br />
+      <p><b>Facilitator:</b> Jiaming Yang</p>
+      <br />
+      <p><b>Participants</b></p>
+      <ul>
+        <li>Piotr Luszczek</li>
+        <li>Max Melnichenko</li>
+        <li>Nathaniel Pritchard</li>
+        <li>Chao Chen</li>
+        <li>Riley Murray</li>
+        <li>Ilse Ipsen</li>
+        <li>Raphael Meyer</li>
+        <li>Joshua Cape</li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="modal" id="breakout2-modal">
+  <div class="modal-background" onclick="document.getElementById('breakout2-modal').classList.remove('is-active')"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Hardware-Aware RandNLA</p>
+      <button class="delete" aria-label="close" onclick="document.getElementById('breakout2-modal').classList.remove('is-active')"></button>
+    </header>
+    <section class="modal-card-body">
+      <p>On modern architectures, communication and data movement (not floating-point operations) are the dominant cost. Randomized methods have natural communication-avoiding properties that make them uniquely suited to current and emerging hardware, but only if algorithms are designed with hardware realities in mind rather than ported after the fact. This session examines algorithm-hardware co-design: reduced-precision arithmetic, GPU-native algorithm formulations, memory hierarchy awareness, and what RandNLA specifically enables on exascale and post-exascale systems. The findings feed into OAC's infrastructure investments, including ACCESS allocations and leadership computing facility planning.</p>
+      <br />
+      <p><b>Facilitator:</b> Sachin Garg</p>
+      <br />
+      <p><b>Participants</b></p>
+      <ul>
+        <li>Longfei Gao</li>
+        <li>Vishwas Rao</li>
+        <li>Daniel Bielich</li>
+        <li>Rob Webber</li>
+        <li>D. Adrian Maldonado</li>
+        <li>Qin Li</li>
+        <li>Chris Geoga</li>
+        <li>Vivak Patel</li>
+        <li>Shambhavi Suryanarayanan</li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="modal" id="breakout3-modal">
+  <div class="modal-background" onclick="document.getElementById('breakout3-modal').classList.remove('is-active')"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">RandNLA for AI and Data-Intensive Science</p>
+      <button class="delete" aria-label="close" onclick="document.getElementById('breakout3-modal').classList.remove('is-active')"></button>
+    </header>
+    <section class="modal-card-body">
+      <p>Foundation models, scientific machine learning, and AI for science are consuming enormous resources and NSF attention. Randomized linear algebra sits beneath many of these workloads (sketching for dimensionality reduction, randomized preconditioning for optimization, sampling for efficient training) yet RandNLA is not yet a first-class citizen in mainstream ML frameworks. This session asks what it would take to embed RandNLA into the national AI cyberinfrastructure: integration with PyTorch/JAX/Flux, support for foundation model training pipelines, active learning for data-efficient science, and gradient estimation for derivative-free and multi-fidelity settings. This connects to OAC's growing AI infrastructure portfolio.</p>
+      <br />
+      <p><b>Facilitator:</b> Kate Pearce</p>
+      <br />
+      <p><b>Participants</b></p>
+      <ul>
+        <li>Kevin Miller</li>
+        <li>Stephen Becker</li>
+        <li>Garvesh Raskutti</li>
+        <li>Keith Levin</li>
+        <li>Yifu Wang</li>
+        <li>Michael Mahoney</li>
+        <li>Michal Derezinski</li>
+        <li>Petros Drineas</li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="modal" id="breakout4-modal">
+  <div class="modal-background" onclick="document.getElementById('breakout4-modal').classList.remove('is-active')"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Reliability, Error Bounds, and Trust</p>
+      <button class="delete" aria-label="close" onclick="document.getElementById('breakout4-modal').classList.remove('is-active')"></button>
+    </header>
+    <section class="modal-card-body">
+      <p>Scientists and engineers need guarantees, not just probabilistic statements. A structural engineer or climate modeler needs to know what "information is preserved with probability at least 1 − p" means for their specific workflow. This session tackles the gap between the theoretical guarantees that RandNLA provides and the deterministic-feeling reliability that practitioners expect. Topics include fixed-precision algorithms that automatically determine sufficient rank, perturbation theory under sketching, connections to random matrix theory for sharper analysis, and verification/validation frameworks. Closing this trust gap is essential for adoption of randomized methods across NSF-funded scientific computing facilities.</p>
+      <br />
+      <p><b>Facilitator:</b> Raphael Meyer</p>
+      <br />
+      <p><b>Participants</b></p>
+      <ul>
+        <li>Chao Chen</li>
+        <li>Garvesh Raskutti</li>
+        <li>Joshua Cape</li>
+        <li>Stephen Becker</li>
+        <li>Michal Derezinski</li>
+        <li>Max Melnichenko</li>
+        <li>Riley Murray</li>
+        <li>Longfei Gao</li>
+        <li>Jiaming Yang</li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="modal" id="breakout5-modal">
+  <div class="modal-background" onclick="document.getElementById('breakout5-modal').classList.remove('is-active')"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Workforce Development and Training</p>
+      <button class="delete" aria-label="close" onclick="document.getElementById('breakout5-modal').classList.remove('is-active')"></button>
+    </header>
+    <section class="modal-card-body">
+      <p>RandNLA sits at an intersection of pure mathematics, computer science, high-performance computing, and domain science that few graduate programs adequately cover. As the field matures and its methods become infrastructure, the question of who builds, maintains, and uses that infrastructure becomes urgent. This session brings together senior leaders who have built training programs with early-career researchers who can speak to gaps in their own preparation. The goal is concrete recommendations for OAC: training grants, curriculum development, research experiences for undergraduates, cross-disciplinary postdoc programs, and short-course or summer school models that have proven effective.</p>
+      <br />
+      <p><b>Facilitator:</b> Nathaniel Pritchard</p>
+      <br />
+      <p><b>Participants</b></p>
+      <ul>
+        <li>Petros Drineas</li>
+        <li>Ilse Ipsen</li>
+        <li>Michael Mahoney</li>
+        <li>Keith Levin</li>
+        <li>Piotr Luszczek</li>
+        <li>Sachin Garg</li>
+        <li>Vivak Patel</li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div class="modal" id="breakout6-modal">
+  <div class="modal-background" onclick="document.getElementById('breakout6-modal').classList.remove('is-active')"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">RandNLA in Scientific Applications</p>
+      <button class="delete" aria-label="close" onclick="document.getElementById('breakout6-modal').classList.remove('is-active')"></button>
+    </header>
+    <section class="modal-card-body">
+      <p>Rather than starting from algorithms and asking where they apply, this session works backwards: starting from scientific and engineering bottlenecks and asking what RandNLA can unlock. Participants bring case studies from large-scale simulation, Gaussian processes, PDE-based inverse problems, industrial eigensolvers, and active learning for computational engineering. The goal is to identify specific scientific problems that are currently intractable or prohibitively expensive where randomized methods could provide a transformative advantage, and to articulate the infrastructure investments needed to realize that advantage. This grounds the report in the concrete scientific impact that OAC exists to enable.</p>
+      <br />
+      <p><b>Facilitator:</b> Yifu Wang</p>
+      <br />
+      <p><b>Participants</b></p>
+      <ul>
+        <li>Vishwas Rao</li>
+        <li>Chris Geoga</li>
+        <li>Qin Li</li>
+        <li>Daniel Bielich</li>
+        <li>Kevin Miller</li>
+        <li>Rob Webber</li>
+        <li>Shambhavi Suryanarayanan</li>
+        <li>Kate Pearce</li>
+        <li>D. Adrian Maldonado</li>
+      </ul>
     </section>
   </div>
 </div>
